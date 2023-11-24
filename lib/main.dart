@@ -1,3 +1,4 @@
+import 'package:ekyrizky_portfolio/pages/home.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:ekyrizky_portfolio/utils/screen_helper.dart';
 import 'package:flutter/material.dart';
@@ -20,23 +21,7 @@ class MyApp extends StatelessWidget {
         canvasColor: kBackgroundColor,
         textTheme: GoogleFonts.farroTextTheme(),
       ),
-      home: ScreenHelper(
-        desktop: Container(
-          width: double.infinity,
-          height: double.infinity,
-          color: Colors.blue,
-        ),
-        tablet: Container(
-          width: double.infinity,
-          height: double.infinity,
-          color: Colors.red,
-        ),
-        mobile: Container(
-          width: double.infinity,
-          height: double.infinity,
-          color: Colors.green,
-        ),
-      ),
+      home: Home(),
     );
   }
 }
