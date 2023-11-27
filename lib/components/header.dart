@@ -1,3 +1,4 @@
+import 'package:ekyrizky_portfolio/components/header_icon.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:ekyrizky_portfolio/utils/globals.dart';
 import 'package:ekyrizky_portfolio/utils/screen_helper.dart';
@@ -17,9 +18,15 @@ class Header extends StatelessWidget {
 
   Widget _build() {
     return Container(
-      width: double.infinity,
-      height: 100,
-      color: Colors.amber,
+      child: Padding(
+        padding: EdgeInsets.all(16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            HeaderIconText(),
+          ],
+        ),
+      ),
     );
   }
 
@@ -30,15 +37,7 @@ class Header extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              "Ekyrizky",
-              style: TextStyle(
-                color: kSecondaryColor,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2.5,
-              ),
-            ),
+            HeaderIcon(),
             GestureDetector(
               onTap: () {
                 Globals.scaffoldKey.currentState!.openEndDrawer();
