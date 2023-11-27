@@ -1,6 +1,5 @@
 import 'package:ekyrizky_portfolio/pages/home.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
-import 'package:ekyrizky_portfolio/utils/screen_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
