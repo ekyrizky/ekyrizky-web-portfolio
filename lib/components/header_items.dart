@@ -1,5 +1,6 @@
 import 'package:ekyrizky_portfolio/models/header_model.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
+import 'package:ekyrizky_portfolio/utils/globals.dart';
 import 'package:flutter/material.dart';
 
 List<HeaderModel> headerItems = [
@@ -44,6 +45,43 @@ class HeaderItems extends StatelessWidget {
             ),
           )
           .toList(),
+    );
+  }
+}
+
+class HeaderItemsDrawer extends StatelessWidget {
+  const HeaderItemsDrawer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.separated(
+      itemBuilder: (BuildContext context, int index) {
+        return ListTile(
+          title: MouseRegion(
+            cursor: SystemMouseCursors.click,
+            child: GestureDetector(
+              onTap: () {
+                Globals.scaffoldKey.currentState!.closeEndDrawer();
+                headerItems[index].onTap();
+              },
+              child: Text(
+                headerItems[index].title,
+                style: const TextStyle(
+                  color: kSecondaryColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+      separatorBuilder: (BuildContext context, int index) {
+        return const SizedBox(
+          height: 8.0,
+        );
+      },
+      itemCount: headerItems.length,
     );
   }
 }
