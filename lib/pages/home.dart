@@ -1,5 +1,6 @@
-import 'package:ekyrizky_portfolio/components/header.dart';
-import 'package:ekyrizky_portfolio/components/header_items.dart';
+import 'package:ekyrizky_portfolio/components/header/header.dart';
+import 'package:ekyrizky_portfolio/components/header/header_items.dart';
+import 'package:ekyrizky_portfolio/components/hero/hero.dart';
 import 'package:ekyrizky_portfolio/utils/globals.dart';
 import 'package:flutter/material.dart';
 
@@ -27,6 +28,7 @@ class Home extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Header(),
+              HeroSection(),
             ],
           ),
         ),

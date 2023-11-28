@@ -1,5 +1,5 @@
-import 'package:ekyrizky_portfolio/components/header_icon.dart';
-import 'package:ekyrizky_portfolio/components/header_items.dart';
+import 'package:ekyrizky_portfolio/components/header/header_icon.dart';
+import 'package:ekyrizky_portfolio/components/header/header_items.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:ekyrizky_portfolio/utils/globals.dart';
 import 'package:ekyrizky_portfolio/utils/screen_helper.dart';
