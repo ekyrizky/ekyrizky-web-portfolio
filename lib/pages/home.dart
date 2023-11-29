@@ -1,5 +1,6 @@
-import 'package:ekyrizky_portfolio/components/header.dart';
-import 'package:ekyrizky_portfolio/components/header_items.dart';
+import 'package:ekyrizky_portfolio/components/header/header.dart';
+import 'package:ekyrizky_portfolio/components/header/header_items.dart';
+import 'package:ekyrizky_portfolio/components/hero/hero.dart';
 import 'package:ekyrizky_portfolio/utils/globals.dart';
 import 'package:flutter/material.dart';
 
@@ -10,10 +11,10 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: Globals.scaffoldKey,
-      endDrawer: Drawer(
+      endDrawer: const Drawer(
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(
+            padding: EdgeInsets.symmetric(
               horizontal: 16.0,
               vertical: 24.0,
             ),
@@ -21,14 +22,13 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Header(),
-            ],
-          ),
+      body: const SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Header(),
+            HeroSection(),
+          ],
         ),
       ),
     );

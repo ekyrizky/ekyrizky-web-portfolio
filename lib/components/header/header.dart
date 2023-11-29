@@ -1,5 +1,5 @@
-import 'package:ekyrizky_portfolio/components/header_icon.dart';
-import 'package:ekyrizky_portfolio/components/header_items.dart';
+import 'package:ekyrizky_portfolio/components/header/header_icon.dart';
+import 'package:ekyrizky_portfolio/components/header/header_items.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:ekyrizky_portfolio/utils/globals.dart';
 import 'package:ekyrizky_portfolio/utils/screen_helper.dart';
@@ -18,19 +18,17 @@ class Header extends StatelessWidget {
   }
 
   Widget _build() {
-    return Container(
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: 32,
-          vertical: 24,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            HeaderIconText(),
-            HeaderItems(),
-          ],
-        ),
+    return const Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: 32,
+        vertical: 24,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          HeaderIconText(),
+          HeaderItems(),
+        ],
       ),
     );
   }
@@ -38,15 +36,13 @@ class Header extends StatelessWidget {
   Widget _buildMobile() {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            HeaderIcon(),
+            const HeaderIcon(),
             GestureDetector(
-              onTap: () {
-                Globals.scaffoldKey.currentState!.openEndDrawer();
-              },
+              onTap: () => Globals.scaffoldKey.currentState!.openEndDrawer(),
               child: const Icon(
                 Icons.menu_rounded,
                 color: kSecondaryColor,
