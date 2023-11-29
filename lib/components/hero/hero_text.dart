@@ -21,7 +21,7 @@ class HeroText extends StatelessWidget {
             fontSize: 20.0,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 6.0,
         ),
         Text(
@@ -33,7 +33,7 @@ class HeroText extends StatelessWidget {
             fontSize: 32.0,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10.0,
         ),
         Text(
@@ -45,7 +45,7 @@ class HeroText extends StatelessWidget {
             fontSize: 20.0,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 32.0,
         ),
         Text(
@@ -57,43 +57,41 @@ class HeroText extends StatelessWidget {
             fontSize: 16.0,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8.0,
         ),
-        Container(
-          child: Wrap(
-            children: [
-              Text(
-                "Got a project?",
-                style: GoogleFonts.farro(
-                  color: kPrimaryColor,
-                  height: 1.2,
-                  fontWeight: FontWeight.w300,
-                  fontSize: 16.0,
-                ),
+        Wrap(
+          children: [
+            Text(
+              "Got a project?",
+              style: GoogleFonts.farro(
+                color: kPrimaryColor,
+                height: 1.2,
+                fontWeight: FontWeight.w300,
+                fontSize: 16.0,
               ),
-              GestureDetector(
-                onTap: () {},
-                child: MouseRegion(
-                  cursor: SystemMouseCursors.click,
-                  child: Text(
-                    " Let's talk.",
-                    style: TextStyle(
-                      color: kSecondaryColor,
-                      height: 1.2,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 16.0,
-                    ),
+            ),
+            GestureDetector(
+              onTap: () {},
+              child: const MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Text(
+                  " Let's talk.",
+                  style: TextStyle(
+                    color: kSecondaryColor,
+                    height: 1.2,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 16.0,
                   ),
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 16.0,
         ),
-        ButtonSocial()
+        const ButtonSocial()
       ],
     );
   }

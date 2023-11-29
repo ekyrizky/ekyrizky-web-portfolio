@@ -15,7 +15,7 @@ class ButtonSocial extends StatelessWidget {
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all<Color>(kPrimaryColor),
             padding: MaterialStateProperty.all<EdgeInsets>(
-              EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+              const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
             ),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
@@ -23,7 +23,7 @@ class ButtonSocial extends StatelessWidget {
               ),
             ),
           ),
-          child: Text(
+          child: const Text(
             "Contact Me",
             style: TextStyle(
               color: kSecondaryColor,
@@ -31,7 +31,7 @@ class ButtonSocial extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 16,
         ),
         GestureDetector(
@@ -46,7 +46,7 @@ class ButtonSocial extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 16,
         ),
         GestureDetector(
@@ -61,7 +61,7 @@ class ButtonSocial extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 16,
         ),
         GestureDetector(

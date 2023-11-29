@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         canvasColor: kBackgroundColor,
         textTheme: GoogleFonts.farroTextTheme(),
       ),
-      home: Home(),
+      home: const Home(),
     );
   }
 }

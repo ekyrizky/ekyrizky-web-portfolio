@@ -13,7 +13,7 @@ class HeroSection extends StatelessWidget {
         2 *
         (ScreenHelper.isTablet(context) ? .15 : .35);
 
-    return Container(
+    return SizedBox(
       height: heroHeight,
       width: double.infinity,
       child: ScreenHelper(
@@ -30,7 +30,7 @@ class HeroSection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Expanded(
+          const Expanded(
             child: HeroText(),
           ),
           Expanded(
@@ -53,7 +53,7 @@ class HeroSection extends StatelessWidget {
   }
 
   Widget _buildMobile() {
-    return Padding(
+    return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 52),
       child: HeroText(),
     );
