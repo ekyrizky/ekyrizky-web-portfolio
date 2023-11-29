@@ -11,7 +11,7 @@ class HeroSection extends StatelessWidget {
         (ScreenHelper.isMobile(context) ? .75 : .60);
     double paddingHorizontal = MediaQuery.of(context).size.width /
         2 *
-        (ScreenHelper.isTablet(context) ? .10 : .35);
+        (ScreenHelper.isTablet(context) ? .15 : .35);
 
     return Container(
       height: heroHeight,
@@ -34,11 +34,17 @@ class HeroSection extends StatelessWidget {
             child: HeroText(),
           ),
           Expanded(
-            child: Container(
-              height: 100,
-              width: double.infinity,
-              color: Colors.blue,
-              child: Text("profile photo"),
+            child: Align(
+              alignment: Alignment.center,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(200.0),
+                child: Image.asset(
+                  'assets/ic_profile_small.jpeg',
+                  width: 220.0,
+                  height: 220.0,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
           ),
         ],
@@ -48,12 +54,8 @@ class HeroSection extends StatelessWidget {
 
   Widget _buildMobile() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 32),
-      child: Container(
-        height: 200,
-        width: double.infinity,
-        color: Colors.blue,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: 52),
+      child: HeroText(),
     );
   }
 }
