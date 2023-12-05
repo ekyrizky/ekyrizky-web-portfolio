@@ -10,7 +10,7 @@ class HeroSection extends StatelessWidget {
     double heroHeight = MediaQuery.of(context).size.height * .8;
     double paddingHorizontal = MediaQuery.of(context).size.width /
         2 *
-        (ScreenHelper.isTablet(context) ? .15 : .35);
+        (ScreenHelper.isTablet(context) ? .15 : .30);
 
     return SizedBox(
       height: heroHeight,
@@ -34,7 +34,7 @@ class HeroSection extends StatelessWidget {
           ),
           Expanded(
             child: Align(
-              alignment: Alignment.center,
+              alignment: Alignment.centerRight,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(200.0),
                 child: Image.asset(
