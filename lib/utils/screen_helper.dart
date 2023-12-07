@@ -23,6 +23,16 @@ class ScreenHelper extends StatelessWidget {
   static bool isMobile(BuildContext context) =>
       MediaQuery.of(context).size.width <= kPhoneMaxWidth;
 
+  static double getPadding(BuildContext context) {
+    if (isMobile(context)) {
+      return 0.15;
+    } else if (isTablet(context)) {
+      return 0.20;
+    } else {
+      return 0.30;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
