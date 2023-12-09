@@ -1,3 +1,4 @@
+import 'package:ekyrizky_portfolio/components/footer/footer.dart';
 import 'package:ekyrizky_portfolio/components/header/header.dart';
 import 'package:ekyrizky_portfolio/components/header/header_items.dart';
 import 'package:ekyrizky_portfolio/components/hero/hero.dart';
@@ -28,11 +29,12 @@ class Home extends StatelessWidget {
       backgroundColor: kBackgroundColor,
       body: const SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Header(),
             HeroSection(),
             Portfolio(),
+            Footer(),
           ],
         ),
       ),
