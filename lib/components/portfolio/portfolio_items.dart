@@ -36,7 +36,7 @@ class PortfolioItems extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 52,
+                height: 32,
               ),
               Text(
                 data.category,

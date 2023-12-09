@@ -8,17 +8,17 @@ class HeroSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double heroHeight = MediaQuery.of(context).size.height * .8;
-    double paddingHorizontal = MediaQuery.of(context).size.width /
+    double padding = MediaQuery.of(context).size.width /
         2 *
-        (ScreenHelper.isTablet(context) ? .15 : .30);
+        ScreenHelper.getPadding(context);
 
     return SizedBox(
       height: heroHeight,
       width: double.infinity,
       child: ScreenHelper(
-        desktop: _build(paddingHorizontal),
-        tablet: _build(paddingHorizontal),
-        mobile: _buildMobile(),
+        desktop: _build(padding),
+        tablet: _build(padding),
+        mobile: _buildMobile(padding),
       ),
     );
   }
@@ -51,9 +51,9 @@ class HeroSection extends StatelessWidget {
     );
   }
 
-  Widget _buildMobile() {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 52),
+  Widget _buildMobile(double padding) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: padding),
       child: HeroText(),
     );
   }
