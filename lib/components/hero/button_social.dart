@@ -66,6 +66,23 @@ class ButtonSocial extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
+            html.window.open('https://github.com/ekyrizky', 'new_tab');
+          },
+          child: MouseRegion(
+            cursor: SystemMouseCursors.click,
+            child: Image.asset(
+              'assets/ic_github.png',
+              width: 30,
+              height: 30,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 16,
+        ),
+        GestureDetector(
+          onTap: () {
             html.window.open('https://instagram.com/ekyrizk_', 'new_tab');
           },
           child: MouseRegion(
