@@ -1,6 +1,8 @@
-import 'package:ekyrizky_portfolio/pages/home.dart';
+import 'package:ekyrizky_portfolio/pages/about_page.dart';
+import 'package:ekyrizky_portfolio/pages/home_page.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Ekyrizky Portfolio',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -20,7 +22,12 @@ class MyApp extends StatelessWidget {
         canvasColor: kBackgroundColor,
         textTheme: GoogleFonts.farroTextTheme(),
       ),
-      home: const Home(),
+      initialRoute: '/',
+      getPages: [
+        GetPage(name: '/', page: () => const HomePage()),
+        GetPage(name: '/AboutPage', page: () => const AboutPage()),
+      ],
+      home: const HomePage(),
     );
   }
 }

@@ -1,12 +1,16 @@
 import 'package:ekyrizky_portfolio/models/header_model.dart';
+import 'package:ekyrizky_portfolio/pages/about_page.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:ekyrizky_portfolio/utils/globals.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 List<HeaderModel> headerItems = [
   HeaderModel(
     title: "About",
-    onTap: () {},
+    onTap: () {
+      Get.to(const AboutPage());
+    },
   ),
   HeaderModel(
     title: "Portfolio",
