@@ -3,6 +3,7 @@ import 'package:ekyrizky_portfolio/components/header/header.dart';
 import 'package:ekyrizky_portfolio/components/header/header_items.dart';
 import 'package:ekyrizky_portfolio/components/hero/hero.dart';
 import 'package:ekyrizky_portfolio/components/portfolio/portfolio.dart';
+import 'package:ekyrizky_portfolio/components/skills/develop_process.dart';
 import 'package:ekyrizky_portfolio/components/skills/skills_icons.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:ekyrizky_portfolio/utils/globals.dart';
@@ -34,6 +35,7 @@ class HomePage extends StatelessWidget {
           children: [
             Header(),
             HeroSection(),
+            DevelopProcess(),
             Portfolio(),
             SkillIcons(),
             Footer(),
