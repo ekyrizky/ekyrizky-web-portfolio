@@ -7,7 +7,8 @@ class HeroSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double heroHeight = MediaQuery.of(context).size.height * .8;
+    double heroHeight = MediaQuery.of(context).size.height *
+        (ScreenHelper.isMobile(context) ? .55 : .75);
     double padding = MediaQuery.of(context).size.width /
         2 *
         ScreenHelper.getPadding(context);
