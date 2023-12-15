@@ -89,7 +89,7 @@ class HeroText extends StatelessWidget {
           ],
         ),
         const SizedBox(
-          height: 16.0,
+          height: 32.0,
         ),
         const ButtonSocial()
       ],

@@ -1,4 +1,5 @@
 import 'package:ekyrizky_portfolio/utils/constants.dart';
+import 'package:ekyrizky_portfolio/utils/screen_helper.dart';
 import 'package:flutter/material.dart';
 import 'dart:html' as html;
 
@@ -7,6 +8,7 @@ class ButtonSocial extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double iconSize = ScreenHelper.isMobile(context) ? 24 : 30;
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -16,7 +18,10 @@ class ButtonSocial extends StatelessWidget {
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all<Color>(kPrimaryColor),
             padding: MaterialStateProperty.all<EdgeInsets>(
-              const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+              EdgeInsets.symmetric(
+                horizontal: ScreenHelper.isMobile(context) ? 6 : 14,
+                vertical: ScreenHelper.isMobile(context) ? 14 : 16,
+              ),
             ),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
@@ -55,8 +60,8 @@ class ButtonSocial extends StatelessWidget {
             cursor: SystemMouseCursors.click,
             child: Image.asset(
               'assets/ic_linkedin.png',
-              width: 30,
-              height: 30,
+              width: iconSize,
+              height: iconSize,
               fit: BoxFit.cover,
             ),
           ),
@@ -72,8 +77,8 @@ class ButtonSocial extends StatelessWidget {
             cursor: SystemMouseCursors.click,
             child: Image.asset(
               'assets/ic_github.png',
-              width: 30,
-              height: 30,
+              width: iconSize,
+              height: iconSize,
               fit: BoxFit.cover,
             ),
           ),
@@ -89,8 +94,8 @@ class ButtonSocial extends StatelessWidget {
             cursor: SystemMouseCursors.click,
             child: Image.asset(
               'assets/ic_instagram.png',
-              width: 30,
-              height: 30,
+              width: iconSize,
+              height: iconSize,
               fit: BoxFit.cover,
             ),
           ),
@@ -106,8 +111,8 @@ class ButtonSocial extends StatelessWidget {
             cursor: SystemMouseCursors.click,
             child: Image.asset(
               'assets/ic_twitter.png',
-              width: 30,
-              height: 30,
+              width: iconSize,
+              height: iconSize,
               fit: BoxFit.cover,
             ),
           ),
