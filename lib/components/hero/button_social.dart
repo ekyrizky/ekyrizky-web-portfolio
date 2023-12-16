@@ -49,7 +49,7 @@ class ButtonSocial extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          width: 16,
+          width: 12,
         ),
         GestureDetector(
           onTap: () {
@@ -67,7 +67,7 @@ class ButtonSocial extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          width: 16,
+          width: 12,
         ),
         GestureDetector(
           onTap: () {
@@ -84,7 +84,7 @@ class ButtonSocial extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          width: 16,
+          width: 12,
         ),
         GestureDetector(
           onTap: () {
@@ -101,7 +101,7 @@ class ButtonSocial extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          width: 16,
+          width: 12,
         ),
         GestureDetector(
           onTap: () {
