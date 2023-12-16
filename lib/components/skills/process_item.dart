@@ -13,11 +13,12 @@ class ProcessItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double iconSize = ScreenHelper.isMobile(context) ? 24 : 30;
+    final double iconSize = ScreenHelper.isMobile(context) ? 26 : 36;
     final double padding = ScreenHelper.isMobile(context) ? 4 : 16;
-    final double textSize = ScreenHelper.isMobile(context) ? 14 : 18;
+    final double textSize = ScreenHelper.isMobile(context) ? 16 : 20;
 
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Image.asset(
           assets,
