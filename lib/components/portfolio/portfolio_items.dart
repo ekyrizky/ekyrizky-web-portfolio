@@ -19,102 +19,108 @@ class PortfolioItems extends StatelessWidget {
   }
 
   Widget _build(double padding) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Image.asset(
-          data.image,
-          width: 200.0,
-          fit: BoxFit.cover,
-        ),
-        SizedBox(
-          width: padding,
-        ),
-        Expanded(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 32,
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    data.category,
-                    style: const TextStyle(
-                      color: kSecondaryColor,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  if (data.storeLink != null)
-                    MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      child: GestureDetector(
-                        onTap: () {
-                          html.window.open(data.storeLink!, 'new_tab');
-                        },
-                        child: Image.asset(
-                          'ic_playstore.png',
-                          width: 20.0,
-                          height: 20.0,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  if (data.githubLink != null)
-                    MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      child: GestureDetector(
-                        onTap: () {
-                          html.window.open(data.githubLink!, 'new_tab');
-                        },
-                        child: Image.asset(
-                          'ic_github.png',
-                          width: 20.0,
-                          height: 20.0,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                ],
-              ),
-              Text(
-                data.title,
-                style: const TextStyle(
-                  color: kTextPrimaryColor,
-                  fontSize: 42,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              Text(
-                data.description,
-                style: const TextStyle(
-                  color: kTextSecondaryColor,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                ),
-                textAlign: TextAlign.left,
-              ),
-              const SizedBox(
-                height: 150,
-              ),
-            ],
+    return Padding(
+      padding: EdgeInsets.only(bottom: 100),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image.asset(
+            data.image,
+            width: 200.0,
+            fit: BoxFit.cover,
           ),
-        ),
-      ],
+          SizedBox(
+            width: padding,
+          ),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(
+                  height: 32,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      data.category,
+                      style: const TextStyle(
+                        color: kSecondaryColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    if (data.storeLink != null)
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: GestureDetector(
+                          onTap: () {
+                            html.window.open(data.storeLink!, 'new_tab');
+                          },
+                          child: Image.asset(
+                            'ic_playstore.png',
+                            width: 16.0,
+                            height: 16.0,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    if (data.githubLink != null)
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: GestureDetector(
+                          onTap: () {
+                            html.window.open(data.githubLink!, 'new_tab');
+                          },
+                          child: Image.asset(
+                            'ic_github.png',
+                            width: 16.0,
+                            height: 16.0,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                Text(
+                  data.title,
+                  style: const TextStyle(
+                    color: kTextPrimaryColor,
+                    fontSize: 42,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  data.description,
+                  style: const TextStyle(
+                    color: kTextSecondaryColor,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    letterSpacing: 1.5,
+                    wordSpacing: 2.0,
+                    height: 1.5,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -132,16 +138,17 @@ class PortfolioItems extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 8,
+          height: 16,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               data.category,
               style: const TextStyle(
                 color: kSecondaryColor,
-                fontSize: 18,
+                fontSize: 14,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -157,8 +164,8 @@ class PortfolioItems extends StatelessWidget {
                   },
                   child: Image.asset(
                     'ic_playstore.png',
-                    width: 20.0,
-                    height: 20.0,
+                    width: 16.0,
+                    height: 16.0,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -175,19 +182,22 @@ class PortfolioItems extends StatelessWidget {
                   },
                   child: Image.asset(
                     'ic_github.png',
-                    width: 20.0,
-                    height: 20.0,
+                    width: 16.0,
+                    height: 16.0,
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
           ],
         ),
+        const SizedBox(
+          height: 4,
+        ),
         Text(
           data.title,
           style: const TextStyle(
             color: kTextPrimaryColor,
-            fontSize: 42,
+            fontSize: 32,
             fontWeight: FontWeight.w800,
           ),
         ),
@@ -198,8 +208,11 @@ class PortfolioItems extends StatelessWidget {
           data.description,
           style: const TextStyle(
             color: kTextSecondaryColor,
-            fontSize: 16,
+            fontSize: 14,
             fontWeight: FontWeight.w500,
+            letterSpacing: 1.5,
+            wordSpacing: 2.0,
+            height: 1.5,
           ),
           textAlign: TextAlign.left,
         ),

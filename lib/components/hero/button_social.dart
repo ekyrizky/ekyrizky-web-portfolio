@@ -19,8 +19,8 @@ class ButtonSocial extends StatelessWidget {
             backgroundColor: MaterialStateProperty.all<Color>(kPrimaryColor),
             padding: MaterialStateProperty.all<EdgeInsets>(
               EdgeInsets.symmetric(
-                horizontal: ScreenHelper.isMobile(context) ? 6 : 14,
-                vertical: ScreenHelper.isMobile(context) ? 14 : 16,
+                horizontal: ScreenHelper.isMobile(context) ? 8 : 14,
+                vertical: ScreenHelper.isMobile(context) ? 16 : 20,
               ),
             ),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(

@@ -15,7 +15,7 @@ class DevelopProcess extends StatelessWidget {
         right: padding,
         left: padding,
         top: 52,
-        bottom: 100,
+        bottom: 120,
       ),
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
