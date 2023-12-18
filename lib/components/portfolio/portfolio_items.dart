@@ -100,7 +100,7 @@ class PortfolioItems extends StatelessWidget {
                   cursor: SystemMouseCursors.click,
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(const PortfolioPage());
+                      Get.to(const PortfolioPage(), arguments: data);
                     },
                     child: Text(
                       data.title,
@@ -208,7 +208,7 @@ class PortfolioItems extends StatelessWidget {
           cursor: SystemMouseCursors.click,
           child: GestureDetector(
             onTap: () {
-              Get.to(const PortfolioPage());
+              Get.to(const PortfolioPage(), arguments: data);
             },
             child: Text(
               data.title,
