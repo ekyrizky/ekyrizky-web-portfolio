@@ -1,8 +1,11 @@
 import 'package:ekyrizky_portfolio/models/portfolio_model.dart';
+import 'package:ekyrizky_portfolio/pages/portfolio_page.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:ekyrizky_portfolio/utils/screen_helper.dart';
 import 'package:flutter/material.dart';
 import 'dart:html' as html;
+
+import 'package:get/route_manager.dart';
 
 class PortfolioItems extends StatelessWidget {
   final PortfolioModel data;
@@ -63,7 +66,7 @@ class PortfolioItems extends StatelessWidget {
                             html.window.open(data.storeLink!, 'new_tab');
                           },
                           child: Image.asset(
-                            'ic_playstore.png',
+                            'assets/ic_github.png',
                             width: 16.0,
                             height: 16.0,
                             fit: BoxFit.cover,
@@ -81,7 +84,7 @@ class PortfolioItems extends StatelessWidget {
                             html.window.open(data.githubLink!, 'new_tab');
                           },
                           child: Image.asset(
-                            'ic_github.png',
+                            'assets/ic_github.png',
                             width: 16.0,
                             height: 16.0,
                             fit: BoxFit.cover,
@@ -93,12 +96,20 @@ class PortfolioItems extends StatelessWidget {
                 const SizedBox(
                   height: 8,
                 ),
-                Text(
-                  data.title,
-                  style: const TextStyle(
-                    color: kTextPrimaryColor,
-                    fontSize: 42,
-                    fontWeight: FontWeight.w800,
+                MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.to(const PortfolioPage());
+                    },
+                    child: Text(
+                      data.title,
+                      style: const TextStyle(
+                        color: kTextPrimaryColor,
+                        fontSize: 42,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -193,12 +204,20 @@ class PortfolioItems extends StatelessWidget {
         const SizedBox(
           height: 4,
         ),
-        Text(
-          data.title,
-          style: const TextStyle(
-            color: kTextPrimaryColor,
-            fontSize: 32,
-            fontWeight: FontWeight.w800,
+        MouseRegion(
+          cursor: SystemMouseCursors.click,
+          child: GestureDetector(
+            onTap: () {
+              Get.to(const PortfolioPage());
+            },
+            child: Text(
+              data.title,
+              style: const TextStyle(
+                color: kTextPrimaryColor,
+                fontSize: 32,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
           ),
         ),
         const SizedBox(

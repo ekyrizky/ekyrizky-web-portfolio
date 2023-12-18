@@ -1,6 +1,5 @@
-import 'package:ekyrizky_portfolio/pages/about_page.dart';
-import 'package:ekyrizky_portfolio/pages/home_page.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
+import 'package:ekyrizky_portfolio/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,12 +21,8 @@ class MyApp extends StatelessWidget {
         canvasColor: kBackgroundColor,
         textTheme: GoogleFonts.farroTextTheme(),
       ),
-      initialRoute: '/',
-      getPages: [
-        GetPage(name: '/', page: () => const HomePage()),
-        GetPage(name: '/AboutPage', page: () => const AboutPage()),
-      ],
-      home: const HomePage(),
+      initialRoute: Routes.home,
+      getPages: getPages,
     );
   }
 }

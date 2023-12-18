@@ -1,5 +1,7 @@
 import 'package:ekyrizky_portfolio/models/header_model.dart';
 import 'package:ekyrizky_portfolio/pages/about_page.dart';
+import 'package:ekyrizky_portfolio/pages/blog_page.dart';
+import 'package:ekyrizky_portfolio/pages/contact_page.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:ekyrizky_portfolio/utils/globals.dart';
 import 'package:flutter/material.dart';
@@ -13,12 +15,16 @@ List<HeaderModel> headerItems = [
     },
   ),
   HeaderModel(
-    title: "Portfolio",
-    onTap: () {},
+    title: "Blogs",
+    onTap: () {
+      Get.to(const BlogPage());
+    },
   ),
   HeaderModel(
     title: "Contact",
-    onTap: () {},
+    onTap: () {
+      Get.to(const ContactPage());
+    },
   )
 ];
 
