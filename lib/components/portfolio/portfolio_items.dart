@@ -66,7 +66,7 @@ class PortfolioItems extends StatelessWidget {
                             html.window.open(data.storeLink!, 'new_tab');
                           },
                           child: Image.asset(
-                            'assets/ic_github.png',
+                            'assets/ic_playstore.png',
                             width: 16.0,
                             height: 16.0,
                             fit: BoxFit.cover,
@@ -174,7 +174,7 @@ class PortfolioItems extends StatelessWidget {
                     html.window.open(data.storeLink!, 'new_tab');
                   },
                   child: Image.asset(
-                    'ic_playstore.png',
+                    'assets/ic_playstore.png',
                     width: 16.0,
                     height: 16.0,
                     fit: BoxFit.cover,
@@ -192,7 +192,7 @@ class PortfolioItems extends StatelessWidget {
                     html.window.open(data.githubLink!, 'new_tab');
                   },
                   child: Image.asset(
-                    'ic_github.png',
+                    'assets/ic_github.png',
                     width: 16.0,
                     height: 16.0,
                     fit: BoxFit.cover,
