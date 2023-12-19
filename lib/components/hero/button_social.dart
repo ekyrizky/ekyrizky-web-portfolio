@@ -19,7 +19,7 @@ class ButtonSocial extends StatelessWidget {
             backgroundColor: MaterialStateProperty.all<Color>(kPrimaryColor),
             padding: MaterialStateProperty.all<EdgeInsets>(
               EdgeInsets.symmetric(
-                horizontal: ScreenHelper.isMobile(context) ? 8 : 14,
+                horizontal: ScreenHelper.isMobile(context) ? 6 : 14,
                 vertical: ScreenHelper.isMobile(context) ? 16 : 20,
               ),
             ),
@@ -39,11 +39,11 @@ class ButtonSocial extends StatelessWidget {
               );
               html.window.open(gmailLaunchUri.toString(), '_blank');
             },
-            child: const Text(
+            child: Text(
               "Contact Me",
               style: TextStyle(
                 color: kSecondaryColor,
-                fontSize: 14,
+                fontSize: ScreenHelper.isMobile(context) ? 12 : 14,
               ),
             ),
           ),

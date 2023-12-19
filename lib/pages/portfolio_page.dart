@@ -1,4 +1,3 @@
-import 'package:ekyrizky_portfolio/components/portfolio/portfolio.dart';
 import 'package:ekyrizky_portfolio/models/portfolio_model.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:ekyrizky_portfolio/utils/screen_helper.dart';
@@ -118,14 +117,25 @@ class PortfolioPage extends StatelessWidget {
                   const SizedBox(
                     width: 8,
                   ),
-                  const Text(
-                    "I'm currently works on this page. Please be patient.",
-                    style: TextStyle(
-                      color: kSecondaryColor,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
+                  ScreenHelper.screenWidth(context) < 450
+                      ? const Expanded(
+                          child: Text(
+                            "I'm currently working on this page. Please be patient.",
+                            style: TextStyle(
+                              color: kSecondaryColor,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        )
+                      : const Text(
+                          "I'm currently working on this page. Please be patient.",
+                          style: TextStyle(
+                            color: kSecondaryColor,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
                 ],
               ),
             ],

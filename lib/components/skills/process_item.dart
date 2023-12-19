@@ -13,9 +13,9 @@ class ProcessItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double iconSize = ScreenHelper.isMobile(context) ? 26 : 36;
+    final double iconSize = ScreenHelper.isMobile(context) ? 20 : 36;
     final double padding = ScreenHelper.isMobile(context) ? 4 : 16;
-    final double textSize = ScreenHelper.isMobile(context) ? 16 : 20;
+    final double textSize = ScreenHelper.isMobile(context) ? 14 : 20;
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -32,7 +32,7 @@ class ProcessItem extends StatelessWidget {
           style: TextStyle(
             color: kPrimaryColor,
             fontSize: textSize,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w400,
           ),
         ),
       ],
