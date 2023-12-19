@@ -126,6 +126,7 @@ class PortfolioPage extends StatelessWidget {
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
                             ),
+                            textAlign: TextAlign.center,
                           ),
                         )
                       : const Text(
