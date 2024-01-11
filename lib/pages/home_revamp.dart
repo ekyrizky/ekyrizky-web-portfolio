@@ -1,4 +1,4 @@
-import 'package:ekyrizky_portfolio/components/molecules/nav_brand_molecule.dart';
+import 'package:ekyrizky_portfolio/components/organism/header_organism.dart';
 import 'package:flutter/material.dart';
 
 class HomeRevamp extends StatelessWidget {
@@ -6,6 +6,6 @@ class HomeRevamp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const NavBrandMolecule();
+    return const HeaderOrganism();
   }
 }
