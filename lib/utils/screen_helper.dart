@@ -38,13 +38,12 @@ class ScreenHelper extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        if (constraints.maxWidth > kTabletMaxWidth) {
-          return desktop;
-        } else if (constraints.maxWidth >= kPhoneMaxWidth &&
-            constraints.maxWidth <= kTabletMaxWidth) {
+        if (constraints.maxWidth < kPhoneMaxWidth) {
+          return mobile;
+        } else if (constraints.maxWidth < kTabletMaxWidth) {
           return tablet;
         } else {
-          return mobile;
+          return desktop;
         }
       },
     );
