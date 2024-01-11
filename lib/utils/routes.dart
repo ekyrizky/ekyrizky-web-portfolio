@@ -1,6 +1,6 @@
 import 'package:ekyrizky_portfolio/pages/about_page.dart';
 import 'package:ekyrizky_portfolio/pages/blog_page.dart';
-import 'package:ekyrizky_portfolio/pages/home_page.dart';
+import 'package:ekyrizky_portfolio/pages/home_revamp.dart';
 import 'package:ekyrizky_portfolio/pages/portfolio_page.dart';
 import 'package:get/route_manager.dart';
 
@@ -14,7 +14,7 @@ class Routes {
 final getPages = [
   GetPage(
     name: Routes.home,
-    page: () => const HomePage(),
+    page: () => HomeRevamp(),
   ),
   GetPage(
     name: Routes.about,

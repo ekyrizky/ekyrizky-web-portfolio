@@ -18,7 +18,7 @@ class Header extends StatelessWidget {
   }
 
   Widget _build() {
-    return const Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: 32,
         vertical: 24,
