@@ -1,3 +1,4 @@
+import 'package:ekyrizky_portfolio/components/warning.dart';
 import 'package:ekyrizky_portfolio/models/portfolio_model.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:ekyrizky_portfolio/utils/screen_helper.dart';
@@ -106,38 +107,9 @@ class PortfolioPage extends StatelessWidget {
               const SizedBox(
                 height: 32,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    'assets/ic_barricade.png',
-                    height: 24.0,
-                    fit: BoxFit.fill,
-                  ),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  ScreenHelper.screenWidth(context) < 450
-                      ? const Expanded(
-                          child: Text(
-                            "I'm currently working on this page. Please be patient.",
-                            style: TextStyle(
-                              color: kSecondaryColor,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        )
-                      : const Text(
-                          "I'm currently working on this page. Please be patient.",
-                          style: TextStyle(
-                            color: kSecondaryColor,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                ],
+              Warning(
+                title: "I'm currently working on this page. Please be patient.",
+                assets: 'assets/lottie/alert.json',
               ),
             ],
           ),
