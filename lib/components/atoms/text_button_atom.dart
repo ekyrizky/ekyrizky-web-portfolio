@@ -19,8 +19,8 @@ class TextButtonAtom extends StatelessWidget {
         backgroundColor: MaterialStateProperty.all<Color>(kPrimaryColor),
         padding: MaterialStateProperty.all<EdgeInsets>(
           const EdgeInsets.symmetric(
-            horizontal: 10,
-            vertical: 16,
+            horizontal: 8,
+            vertical: 18,
           ),
         ),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(

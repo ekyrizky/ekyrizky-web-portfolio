@@ -17,18 +17,12 @@ class HeaderOrganism extends StatelessWidget {
   }
 
   Widget _build(bool isDrawer) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 32,
-        vertical: 24,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          const NavBrandMolecule(),
-          isDrawer ? const DrawerIconAtom() : const NavItemsMolecule(),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        const NavBrandMolecule(),
+        isDrawer ? const DrawerIconAtom() : const NavItemsMolecule(),
+      ],
     );
   }
 }
