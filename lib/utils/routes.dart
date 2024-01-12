@@ -1,5 +1,6 @@
 import 'package:ekyrizky_portfolio/pages/about_page.dart';
 import 'package:ekyrizky_portfolio/pages/blog_page.dart';
+import 'package:ekyrizky_portfolio/pages/contact_page.dart';
 import 'package:ekyrizky_portfolio/pages/home_revamp.dart';
 import 'package:ekyrizky_portfolio/pages/portfolio_page.dart';
 import 'package:get/route_manager.dart';
@@ -7,7 +8,8 @@ import 'package:get/route_manager.dart';
 class Routes {
   static String home = '/home';
   static String about = '/about';
-  static String blog = '/blog';
+  static String blogs = '/blogs';
+  static String contact = '/contact';
   static String portfolio = '/portfolio';
 }
 
@@ -21,8 +23,12 @@ final getPages = [
     page: () => const AboutPage(),
   ),
   GetPage(
-    name: Routes.blog,
+    name: Routes.blogs,
     page: () => const BlogPage(),
+  ),
+  GetPage(
+    name: Routes.contact,
+    page: () => const ContactPage(),
   ),
   GetPage(
     name: Routes.portfolio,

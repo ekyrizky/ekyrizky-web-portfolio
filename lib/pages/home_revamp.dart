@@ -1,3 +1,4 @@
+import 'package:ekyrizky_portfolio/components/molecules/hero_social_molecule.dart';
 import 'package:ekyrizky_portfolio/components/organism/header_organism.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,7 @@ class HomeRevamp extends StatelessWidget {
         child: Column(
           children: [
             HeaderOrganism(),
+            HeroSocialMolecule(),
           ],
         ),
       ),

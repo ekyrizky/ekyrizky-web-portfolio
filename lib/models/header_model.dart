@@ -1,6 +1,4 @@
-import 'package:ekyrizky_portfolio/pages/about_page.dart';
-import 'package:ekyrizky_portfolio/pages/blog_page.dart';
-import 'package:ekyrizky_portfolio/pages/contact_page.dart';
+import 'package:ekyrizky_portfolio/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,19 +15,19 @@ class HeaderModel {
     HeaderModel(
       title: "About",
       onTap: () {
-        Get.to(const AboutPage());
+        Get.toNamed(Routes.about);
       },
     ),
     HeaderModel(
       title: "Blogs",
       onTap: () {
-        Get.to(const BlogPage());
+        Get.toNamed(Routes.blogs);
       },
     ),
     HeaderModel(
       title: "Contact",
       onTap: () {
-        Get.to(const ContactPage());
+        Get.toNamed(Routes.contact);
       },
     )
   ];
