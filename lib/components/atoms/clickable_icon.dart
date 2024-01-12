@@ -1,3 +1,4 @@
+import 'package:ekyrizky_portfolio/utils/screen_helper.dart';
 import 'package:flutter/material.dart';
 
 class ClickableIconAtom extends StatelessWidget {
@@ -20,8 +21,8 @@ class ClickableIconAtom extends StatelessWidget {
         },
         child: Image.asset(
           icon,
-          width: 32,
-          height: 32,
+          width: ScreenHelper.isMobile(context) ? 24 : 32,
+          height: ScreenHelper.isMobile(context) ? 24 : 32,
           fit: BoxFit.cover,
         ),
       ),

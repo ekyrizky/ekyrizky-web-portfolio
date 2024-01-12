@@ -8,11 +8,7 @@ class NavBrandMolecule extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenHelper(
-      desktop: _build(),
-      tablet: _build(),
-      mobile: _buildMobile(),
-    );
+    return ScreenHelper.isMobile(context) ? _buildMobile() : _build();
   }
 
   Widget _build() {
@@ -22,10 +18,10 @@ class NavBrandMolecule extends StatelessWidget {
   Widget _buildMobile() {
     return const Row(
       mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         PhotoProfileAtom(size: 32),
-        SizedBox(width: 16),
+        SizedBox(width: 8),
         BrandTextAtom(),
       ],
     );

@@ -1,4 +1,5 @@
 import 'package:ekyrizky_portfolio/utils/constants.dart';
+import 'package:ekyrizky_portfolio/utils/screen_helper.dart';
 import 'package:flutter/material.dart';
 
 class BrandTextAtom extends StatelessWidget {
@@ -10,11 +11,11 @@ class BrandTextAtom extends StatelessWidget {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {},
-        child: const Text(
+        child: Text(
           'Ekyrizky',
           style: TextStyle(
             color: kSecondaryColor,
-            fontSize: 20,
+            fontSize: ScreenHelper.isMobile(context) ? 14 : 20,
             fontWeight: FontWeight.bold,
             letterSpacing: 2.5,
           ),

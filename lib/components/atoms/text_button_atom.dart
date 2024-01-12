@@ -1,4 +1,5 @@
 import 'package:ekyrizky_portfolio/utils/constants.dart';
+import 'package:ekyrizky_portfolio/utils/screen_helper.dart';
 import 'package:flutter/material.dart';
 
 class TextButtonAtom extends StatelessWidget {
@@ -18,14 +19,14 @@ class TextButtonAtom extends StatelessWidget {
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all<Color>(kPrimaryColor),
         padding: MaterialStateProperty.all<EdgeInsets>(
-          const EdgeInsets.symmetric(
-            horizontal: 8,
-            vertical: 18,
+          EdgeInsets.symmetric(
+            horizontal: ScreenHelper.isMobile(context) ? 6 : 8,
+            vertical: ScreenHelper.isMobile(context) ? 10 : 16,
           ),
         ),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(8),
           ),
         ),
       ),
