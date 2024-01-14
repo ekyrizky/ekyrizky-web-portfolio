@@ -1,3 +1,5 @@
+import 'package:ekyrizky_portfolio/components/molecules/banner_molecule.dart';
+import 'package:ekyrizky_portfolio/components/organism/carousel_organism.dart';
 import 'package:ekyrizky_portfolio/components/organism/header_organism.dart';
 import 'package:ekyrizky_portfolio/components/organism/hero_intro_organism.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
@@ -31,6 +33,23 @@ class HomeRevamp extends StatelessWidget {
                 vertical: heroHeight,
               ),
               child: HeroIntroOrganism(),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 32,
+                vertical: 24,
+              ),
+              child: CarouselOrganism(),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 32,
+                vertical: 24,
+              ),
+              child: BannerMolecule(
+                image: 'assets/ic_android.png',
+                title: 'DESIGN',
+              ),
             ),
           ],
         ),
