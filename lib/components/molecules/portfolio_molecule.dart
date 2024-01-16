@@ -4,14 +4,19 @@ import 'package:ekyrizky_portfolio/models/portfolio_model.dart';
 import 'package:flutter/material.dart';
 
 class PortfolioMolecule extends StatelessWidget {
-  const PortfolioMolecule({super.key});
+  const PortfolioMolecule({super.key, required this.data});
+
+  final PortfolioModel data;
 
   @override
   Widget build(BuildContext context) {
-    final data = PortfolioModel.portfolioItems[6];
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        PortfolioAtom(data: data),
+        Padding(
+          padding: EdgeInsets.only(left: 8),
+          child: PortfolioAtom(data: data),
+        ),
         PortfolioLinkAtom(data: data),
       ],
     );
