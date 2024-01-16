@@ -1,4 +1,5 @@
 import 'package:ekyrizky_portfolio/components/molecules/image_divider_molecule.dart';
+import 'package:ekyrizky_portfolio/components/molecules/portfolio_molecule.dart';
 import 'package:ekyrizky_portfolio/components/organism/header_organism.dart';
 import 'package:ekyrizky_portfolio/components/organism/hero_intro_organism.dart';
 import 'package:ekyrizky_portfolio/utils/constants.dart';
@@ -34,6 +35,7 @@ class HomeRevamp extends StatelessWidget {
               child: HeroIntroOrganism(),
             ),
             ImageDividerMolecule(),
+            PortfolioMolecule(),
           ],
         ),
       ),

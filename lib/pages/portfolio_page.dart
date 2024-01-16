@@ -59,12 +59,12 @@ class PortfolioPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  if (data.storeLink != null)
+                  if (data.playstoreLink != null)
                     MouseRegion(
                       cursor: SystemMouseCursors.click,
                       child: GestureDetector(
                         onTap: () {
-                          html.window.open(data.storeLink!, 'new_tab');
+                          html.window.open(data.playstoreLink!, 'new_tab');
                         },
                         child: Image.asset(
                           'assets/ic_playstore_big.png',

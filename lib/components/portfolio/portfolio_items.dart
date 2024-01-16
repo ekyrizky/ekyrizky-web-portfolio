@@ -58,12 +58,12 @@ class PortfolioItems extends StatelessWidget {
                     const SizedBox(
                       width: 8,
                     ),
-                    if (data.storeLink != null)
+                    if (data.playstoreLink != null)
                       MouseRegion(
                         cursor: SystemMouseCursors.click,
                         child: GestureDetector(
                           onTap: () {
-                            html.window.open(data.storeLink!, 'new_tab');
+                            html.window.open(data.playstoreLink!, 'new_tab');
                           },
                           child: Image.asset(
                             'assets/ic_playstore.png',
@@ -166,12 +166,12 @@ class PortfolioItems extends StatelessWidget {
             const SizedBox(
               width: 8,
             ),
-            if (data.storeLink != null)
+            if (data.playstoreLink != null)
               MouseRegion(
                 cursor: SystemMouseCursors.click,
                 child: GestureDetector(
                   onTap: () {
-                    html.window.open(data.storeLink!, 'new_tab');
+                    html.window.open(data.playstoreLink!, 'new_tab');
                   },
                   child: Image.asset(
                     'assets/ic_playstore.png',
