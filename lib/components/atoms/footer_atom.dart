@@ -2,8 +2,8 @@ import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Footer extends StatelessWidget {
-  const Footer({super.key});
+class FooterAtom extends StatelessWidget {
+  const FooterAtom({super.key});
 
   @override
   Widget build(BuildContext context) {

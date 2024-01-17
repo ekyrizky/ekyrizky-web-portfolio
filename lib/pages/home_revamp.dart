@@ -1,3 +1,4 @@
+import 'package:ekyrizky_portfolio/components/atoms/footer_atom.dart';
 import 'package:ekyrizky_portfolio/components/molecules/image_divider_molecule.dart';
 import 'package:ekyrizky_portfolio/components/organism/header_organism.dart';
 import 'package:ekyrizky_portfolio/components/organism/hero_intro_organism.dart';
@@ -19,7 +20,7 @@ class HomeRevamp extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
               padding: EdgeInsets.symmetric(
@@ -33,7 +34,10 @@ class HomeRevamp extends StatelessWidget {
                 horizontal: 32,
                 vertical: heroHeight,
               ),
-              child: HeroIntroOrganism(),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: HeroIntroOrganism(),
+              ),
             ),
             ImageDividerMolecule(),
             Column(
@@ -46,6 +50,7 @@ class HomeRevamp extends StatelessWidget {
                       child: PortfolioOrganism(data: item)))
                   .toList(),
             ),
+            FooterAtom(),
           ],
         ),
       ),

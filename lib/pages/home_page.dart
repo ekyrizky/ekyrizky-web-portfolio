@@ -1,4 +1,4 @@
-import 'package:ekyrizky_portfolio/components/footer/footer.dart';
+import 'package:ekyrizky_portfolio/components/atoms/footer_atom.dart';
 import 'package:ekyrizky_portfolio/components/header/header.dart';
 import 'package:ekyrizky_portfolio/components/header/header_items.dart';
 import 'package:ekyrizky_portfolio/components/hero/hero.dart';
@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
             DevelopProcess(),
             Portfolio(),
             SkillIcons(),
-            Footer(),
+            FooterAtom(),
           ],
         ),
       ),
