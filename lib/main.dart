@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.farroTextTheme(),
       ),
       initialRoute: Routes.home,
+      defaultTransition: Transition.downToUp,
       getPages: getPages,
     );
   }

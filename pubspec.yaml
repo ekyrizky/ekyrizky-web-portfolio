@@ -38,7 +38,6 @@ dependencies:
   google_fonts: ^6.1.0
   html: ^0.15.4
   get: ^4.6.6
-  lottie: ^2.7.0
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +64,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
+    - assets/portfolio/
     - assets/lottie/
   #   - images/a_dot_ham.jpeg
 

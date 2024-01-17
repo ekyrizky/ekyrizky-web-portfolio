@@ -6,5 +6,5 @@ const Color kBackgroundColor = Color.fromRGBO(244, 244, 239, 1);
 const Color kTextPrimaryColor = Color.fromRGBO(31, 30, 30, 1);
 const Color kTextSecondaryColor = Color.fromRGBO(116, 129, 136, 1);
 
-const double kPhoneMaxWidth = 670.0;
-const double kTabletMaxWidth = 1000.0;
+const double kPhoneMaxWidth = 599.0;
+const double kTabletMaxWidth = 960.0;
