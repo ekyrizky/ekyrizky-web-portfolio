@@ -12,23 +12,23 @@ class HeaderModel {
   });
 
   static List<HeaderModel> headerItems = [
-    HeaderModel(
-      title: "About",
-      onTap: () {
-        Get.toNamed(Routes.about);
-      },
-    ),
-    HeaderModel(
-      title: "Blogs",
-      onTap: () {
-        Get.toNamed(Routes.blogs);
-      },
-    ),
-    HeaderModel(
-      title: "Contact",
-      onTap: () {
-        Get.toNamed(Routes.contact);
-      },
-    )
+    // HeaderModel(
+    //   title: "About",
+    //   onTap: () {
+    //     Get.toNamed(Routes.about);
+    //   },
+    // ),
+    // HeaderModel(
+    //   title: "Blogs",
+    //   onTap: () {
+    //     Get.toNamed(Routes.blogs);
+    //   },
+    // ),
+    // HeaderModel(
+    //   title: "Contact",
+    //   onTap: () {
+    //     Get.toNamed(Routes.contact);
+    //   },
+    // )
   ];
 }
