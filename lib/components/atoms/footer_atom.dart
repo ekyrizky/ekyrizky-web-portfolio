@@ -10,7 +10,7 @@ class FooterAtom extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 32),
       child: Text(
-        "Copyright \u00a9 2023 Rizky Ananda",
+        "Copyright \u00a9 2024 Rizky Ananda",
         style: GoogleFonts.farro(
           color: kSecondaryColor,
           height: 1.0,

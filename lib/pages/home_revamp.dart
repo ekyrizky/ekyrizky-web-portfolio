@@ -1,4 +1,5 @@
 import 'package:ekyrizky_portfolio/components/atoms/footer_atom.dart';
+import 'package:ekyrizky_portfolio/components/atoms/image_row_atom.dart';
 import 'package:ekyrizky_portfolio/components/molecules/image_divider_molecule.dart';
 import 'package:ekyrizky_portfolio/components/organism/header_organism.dart';
 import 'package:ekyrizky_portfolio/components/organism/hero_intro_organism.dart';
@@ -49,6 +50,10 @@ class HomeRevamp extends StatelessWidget {
                       ),
                       child: PortfolioOrganism(data: item)))
                   .toList(),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 32),
+              child: ImageRowAtom(),
             ),
             FooterAtom(),
           ],

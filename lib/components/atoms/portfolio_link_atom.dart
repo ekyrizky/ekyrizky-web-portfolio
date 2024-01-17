@@ -1,5 +1,4 @@
 import 'package:ekyrizky_portfolio/models/portfolio_model.dart';
-import 'package:ekyrizky_portfolio/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'dart:html' as html;
 
@@ -58,7 +57,7 @@ class PortfolioLinkAtom extends StatelessWidget {
                       const Text(
                         'GitHub',
                         style: TextStyle(
-                          color: kPrimaryColor,
+                          color: Colors.black,
                           fontSize: 20,
                           fontWeight: FontWeight.w800,
                         ),
