@@ -25,7 +25,7 @@ class HomeRevamp extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: ScreenHelper.isMobile(context) ? 16 : 32,
+                horizontal: ScreenHelper.isDesktop(context) ? 52 : 32,
                 vertical: 24,
               ),
               child: HeaderOrganism(),
@@ -35,27 +35,29 @@ class HomeRevamp extends StatelessWidget {
                 horizontal: 32,
                 vertical: heroHeight,
               ),
-              child: Align(
+              child: const Align(
                 alignment: Alignment.centerLeft,
                 child: HeroIntroOrganism(),
               ),
             ),
-            ImageDividerMolecule(),
+            const ImageDividerMolecule(),
             Column(
               children: PortfolioModel.portfolioItems
                   .map((item) => Padding(
                       padding: EdgeInsets.symmetric(
-                        horizontal: ScreenHelper.isMobile(context) ? 16 : 52,
+                        horizontal: MediaQuery.of(context).size.width /
+                            2 *
+                            ScreenHelper.getPadding(context),
                         vertical: 24,
                       ),
                       child: PortfolioOrganism(data: item)))
                   .toList(),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(vertical: 32),
               child: ImageRowAtom(),
             ),
-            FooterAtom(),
+            const FooterAtom(),
           ],
         ),
       ),

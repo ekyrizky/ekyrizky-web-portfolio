@@ -27,9 +27,10 @@ class PortfolioOrganism extends StatelessWidget {
           width: 200.0,
           fit: BoxFit.cover,
         ),
+        const SizedBox(width: 32),
         Expanded(
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 32),
+            padding: const EdgeInsets.symmetric(vertical: 32),
             child: PortfolioMolecule(data: data),
           ),
         ),
@@ -46,7 +47,7 @@ class PortfolioOrganism extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 16),
+          padding: const EdgeInsets.symmetric(vertical: 16),
           child: PortfolioMolecule(data: data),
         ),
       ],

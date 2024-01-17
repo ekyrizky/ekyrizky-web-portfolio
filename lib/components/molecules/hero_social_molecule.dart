@@ -46,7 +46,7 @@ class HeroSocialMolecule extends StatelessWidget {
             vertical: 8,
           ),
           child: ClickableIconAtom(
-            icon: 'assets/ic_github.png',
+            icon: 'assets/ic_github_blue.png',
             onTap: () {
               html.window.open('https://github.com/ekyrizky/', 'new_tab');
             },
