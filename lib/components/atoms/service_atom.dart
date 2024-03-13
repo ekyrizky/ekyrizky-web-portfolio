@@ -11,7 +11,7 @@ class ServiceAtom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(maxWidth: 200),
+      constraints: BoxConstraints(maxWidth: 160),
       decoration: BoxDecoration(
         color: kSecondaryColor.withOpacity(0.3),
         borderRadius: BorderRadius.circular(8),
@@ -20,15 +20,17 @@ class ServiceAtom extends StatelessWidget {
           width: 2,
         ),
       ),
+      margin: const EdgeInsets.symmetric(horizontal: 8),
       child: Padding(
-        padding: EdgeInsets.all(12),
+        padding: EdgeInsets.all(8),
         child: Row(
           children: [
             Image.asset(
               asset,
-              width: 56,
+              width: 36,
               fit: BoxFit.fill,
             ),
+            const SizedBox(width: 4),
             Expanded(
               child: Center(
                 child: Text(
@@ -37,7 +39,7 @@ class ServiceAtom extends StatelessWidget {
                     color: kPrimaryColor,
                     height: 1.2,
                     fontWeight: FontWeight.w400,
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                   ),
                 ),
               ),
